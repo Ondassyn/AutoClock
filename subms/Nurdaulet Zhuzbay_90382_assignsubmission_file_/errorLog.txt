@@ -1,0 +1,9 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> main.o: In function `main':
+==> main.cpp:(.text.startup+0xaab): undefined reference to `am_pm_clock::operator=(am_pm_clock const&)'
+==> collect2: error: ld returned 1 exit status
+==> make: *** [main] Error 1
+{Compiler}: FAILURE

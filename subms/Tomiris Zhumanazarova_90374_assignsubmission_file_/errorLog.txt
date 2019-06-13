@@ -1,0 +1,49 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp: In function ‘int main()’:
+==> am_pm_clock.cpp:8:34: error: lvalue required as left operand of assignment
+==>      if( initial_time.get_hours() = 12 )
+==>                                   ^
+==> am_pm_clock.cpp:13:36: error: lvalue required as left operand of assignment
+==>      if( initial_time.get_minutes() = 0 )
+==>                                     ^
+==> am_pm_clock.cpp:18:36: error: lvalue required as left operand of assignment
+==>      if( initial_time.get_seconds() = 0 )
+==>                                     ^
+==> am_pm_clock.cpp:23:30: error: lvalue required as left operand of assignment
+==>      if( initial_time.is_am() = 1 )
+==>                               ^
+==> am_pm_clock.cpp:58:234: error: ‘class am_pm_clock’ has no member named ‘get_mintes’
+==>          if(( assigned_operator.get_hours() == 12 ) && ( assigned_operator.get_minutes() == 0 ) && ( assigned_operator.get_seconds() == 0 ) && ( assigned_operator.is_am() == 1 ) && ( initial_time.get_hours() == 12 ) && ( initial_time.get_mintes() == 0 ) && ( initial_time.get_seconds() == 0 ) && (initial_time.is_am() == 1 ) && ( set_time.get_hours() == 12 ) && ( set_time.get_minutes() == 0 ) && ( set_time.get_seconds() == 0 ) && ( set_time.is_am() == 1 ))
+==>                                                                                                                                                                                                                                           ^
+==> am_pm_clock.cpp:89:28: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_hours > 12 || clock2.set_hours < 1 )
+==>                             ^
+==> am_pm_clock.cpp:89:53: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_hours > 12 || clock2.set_hours < 1 )
+==>                                                      ^
+==> am_pm_clock.cpp:91:62: error: expected primary-expression before ‘=’ token
+==>      if(( clock1.get_hours() == 7 ) && ( clock2.get_hours() !== 13 ))
+==>                                                               ^
+==> am_pm_clock.cpp:98:30: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_minutes < 1 || clock2.set_minutes>59)
+==>                               ^
+==> am_pm_clock.cpp:98:54: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_minutes < 1 || clock2.set_minutes>59)
+==>                                                       ^
+==> am_pm_clock.cpp:100:66: error: expected primary-expression before ‘=’ token
+==>      if(( clock1.get_minutes() == 4 ) && ( clock2.get_minutes() !== -1 ))
+==>                                                                   ^
+==> am_pm_clock.cpp:107:30: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_seconds < 1 || clock2.set_seconds > 59)
+==>                               ^
+==> am_pm_clock.cpp:107:56: error: invalid use of member function (did you forget the ‘()’ ?)
+==>      if (clock2.set_seconds < 1 || clock2.set_seconds > 59)
+==>                                                         ^
+==> am_pm_clock.cpp:109:67: error: expected primary-expression before ‘=’ token
+==>      if(( clock1.get_seconds() == 30 ) && ( clock2.get_seconds() !== 114 ))
+==>                                                                    ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

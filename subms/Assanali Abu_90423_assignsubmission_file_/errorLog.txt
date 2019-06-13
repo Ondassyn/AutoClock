@@ -1,0 +1,20 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:7:7: error: redefinition of ‘class am_pm_clock’
+==>  class am_pm_clock {
+==>        ^
+==> In file included from am_pm_clock.cpp:3:0:
+==> am_pm_clock.h:7:7: error: previous definition of ‘class am_pm_clock’
+==>  class am_pm_clock {
+==>        ^
+==> am_pm_clock.cpp:7:1: error: new types may not be defined in a return type
+==>  class am_pm_clock {
+==>  ^
+==> am_pm_clock.cpp:7:1: note: (perhaps a semicolon is missing after the definition of ‘<type error>’)
+==> am_pm_clock.cpp:219:10: error: two or more data types in declaration of ‘main’
+==>  int main() {
+==>           ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

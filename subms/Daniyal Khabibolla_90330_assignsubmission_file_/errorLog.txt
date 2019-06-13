@@ -1,0 +1,27 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:7:4: error: extra ‘;’ [-Wpedantic]
+==>   {};
+==>     ^
+==> am_pm_clock.cpp:14:4: error: extra ‘;’ [-Wpedantic]
+==>   {};
+==>     ^
+==> am_pm_clock.cpp: In member function ‘am_pm_clock& am_pm_clock::operator=(const am_pm_clock&)’:
+==> am_pm_clock.cpp:27:2: warning: no return statement in function returning non-void [-Wreturn-type]
+==>   }
+==>   ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:82:8: error: redefinition of ‘void am_pm_clock::print(std::ostream&) const’
+==>    void am_pm_clock::print(std::ostream& out) const {
+==>         ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:101:7: note: ‘void am_pm_clock::print(std::ostream&) const’ previously defined here
+==>   void print(std::ostream& out) const {
+==>        ^
+==> am_pm_clock.cpp:90:3: error: extra ‘;’ [-Wpedantic]
+==>   };
+==>    ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

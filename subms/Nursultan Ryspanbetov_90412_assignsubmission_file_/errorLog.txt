@@ -1,0 +1,129 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:14:14: error: expected unqualified-id before ‘)’ token
+==>   am_pm_clock():
+==>               ^
+==> am_pm_clock.cpp:27:14: error: expected unqualified-id before ‘unsigned’
+==>   am_pm_clock(unsigned int hrs, unsigned int mins, unsigned int secs, bool am_val):
+==>               ^
+==> am_pm_clock.cpp:27:14: error: expected ‘)’ before ‘unsigned’
+==> am_pm_clock.cpp:39:14: error: expected unqualified-id before ‘const’
+==>   am_pm_clock(const am_pm_clock &clock){
+==>               ^
+==> am_pm_clock.cpp:39:14: error: expected ‘)’ before ‘const’
+==> am_pm_clock.cpp:49:49: error: ‘am_pm_clock& operator=(const am_pm_clock&)’ must be a nonstatic member function
+==>   am_pm_clock& operator=(const am_pm_clock& clock){
+==>                                                  ^
+==> am_pm_clock.cpp: In function ‘void toggle_am_pm()’:
+==> am_pm_clock.cpp:61:3: error: ‘am’ was not declared in this scope
+==>    am = !am;
+==>    ^
+==> am_pm_clock.cpp: In function ‘void reset()’:
+==> am_pm_clock.cpp:67:3: error: ‘hours’ was not declared in this scope
+==>    hours = 12;
+==>    ^
+==> am_pm_clock.cpp:68:3: error: ‘minutes’ was not declared in this scope
+==>    minutes = 0;
+==>    ^
+==> am_pm_clock.cpp:69:3: error: ‘seconds’ was not declared in this scope
+==>    seconds = 0;
+==>    ^
+==> am_pm_clock.cpp:70:3: error: ‘am’ was not declared in this scope
+==>    am = true;
+==>    ^
+==> am_pm_clock.cpp: In function ‘void advance_one_sec()’:
+==> am_pm_clock.cpp:77:20: error: ‘minutes’ was not declared in this scope
+==>    unsigned int m = minutes;
+==>                     ^
+==> am_pm_clock.cpp:78:20: error: ‘seconds’ was not declared in this scope
+==>    unsigned int s = seconds;
+==>                     ^
+==> am_pm_clock.cpp:79:20: error: ‘hours’ was not declared in this scope
+==>    unsigned int h = hours;
+==>                     ^
+==> am_pm_clock.cpp: In function ‘void advance_n_secs(unsigned int)’:
+==> am_pm_clock.cpp:89:20: error: ‘minutes’ was not declared in this scope
+==>    unsigned int m = minutes;
+==>                     ^
+==> am_pm_clock.cpp:90:20: error: ‘seconds’ was not declared in this scope
+==>    unsigned int s = seconds;
+==>                     ^
+==> am_pm_clock.cpp:91:20: error: ‘hours’ was not declared in this scope
+==>    unsigned int h = hours;
+==>                     ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:100:27: error: non-member function ‘unsigned int get_hours()’ cannot have cv-qualifier
+==>   unsigned int get_hours() const{
+==>                            ^
+==> am_pm_clock.cpp: In function ‘unsigned int get_hours()’:
+==> am_pm_clock.cpp:101:10: error: ‘hours’ was not declared in this scope
+==>    return hours;
+==>           ^
+==> am_pm_clock.cpp: In function ‘void set_hours(unsigned int)’:
+==> am_pm_clock.cpp:112:3: error: ‘hours’ was not declared in this scope
+==>    hours = hrs;
+==>    ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:118:29: error: non-member function ‘unsigned int get_minutes()’ cannot have cv-qualifier
+==>   unsigned int get_minutes() const{
+==>                              ^
+==> am_pm_clock.cpp: In function ‘unsigned int get_minutes()’:
+==> am_pm_clock.cpp:119:10: error: ‘minutes’ was not declared in this scope
+==>    return minutes;
+==>           ^
+==> am_pm_clock.cpp: In function ‘void set_minutes(unsigned int)’:
+==> am_pm_clock.cpp:130:3: error: ‘minutes’ was not declared in this scope
+==>    minutes = mins;
+==>    ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:136:29: error: non-member function ‘unsigned int get_seconds()’ cannot have cv-qualifier
+==>   unsigned int get_seconds() const{
+==>                              ^
+==> am_pm_clock.cpp: In function ‘unsigned int get_seconds()’:
+==> am_pm_clock.cpp:137:10: error: ‘seconds’ was not declared in this scope
+==>    return seconds;
+==>           ^
+==> am_pm_clock.cpp: In function ‘void set_seconds(unsigned int)’:
+==> am_pm_clock.cpp:148:3: error: ‘seconds’ was not declared in this scope
+==>    seconds = secs;
+==>    ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:154:15: error: non-member function ‘bool is_am()’ cannot have cv-qualifier
+==>   bool is_am() const{
+==>                ^
+==> am_pm_clock.cpp: In function ‘bool is_am()’:
+==> am_pm_clock.cpp:155:10: error: ‘am’ was not declared in this scope
+==>    return am;
+==>           ^
+==> am_pm_clock.cpp: In function ‘void set_am(bool)’:
+==> am_pm_clock.cpp:162:3: error: ‘am’ was not declared in this scope
+==>    am = am_val;
+==>    ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:168:32: error: non-member function ‘void print(std::ostream&)’ cannot have cv-qualifier
+==>   void print(std::ostream& out) const {
+==>                                 ^
+==> am_pm_clock.cpp: In function ‘void print(std::ostream&)’:
+==> am_pm_clock.cpp:170:43: error: ‘hours’ was not declared in this scope
+==>    std::sprintf(buff, "%02d:%02d:%02d%cm", hours, minutes, seconds,
+==>                                            ^
+==> am_pm_clock.cpp:170:50: error: ‘minutes’ was not declared in this scope
+==>    std::sprintf(buff, "%02d:%02d:%02d%cm", hours, minutes, seconds,
+==>                                                   ^
+==> am_pm_clock.cpp:170:59: error: ‘seconds’ was not declared in this scope
+==>    std::sprintf(buff, "%02d:%02d:%02d%cm", hours, minutes, seconds,
+==>                                                            ^
+==> am_pm_clock.cpp:171:7: error: ‘am’ was not declared in this scope
+==>      ( am ? 'a' : 'p' ));
+==>        ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:178:16: error: expected constructor, destructor, or type conversion before ‘;’ token
+==>   ~am_pm_clock();
+==>                 ^
+==> am_pm_clock.cpp:179:1: error: expected declaration before ‘}’ token
+==>  };
+==>  ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

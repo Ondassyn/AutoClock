@@ -1,0 +1,46 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp: In member function ‘am_pm_clock& am_pm_clock::operator=(const am_pm_clock&)’:
+==> am_pm_clock.cpp:39:3: warning: no return statement in function returning non-void [-Wreturn-type]
+==>    }
+==>    ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:75:16: error: prototype for ‘unsigned int am_pm_clock::get_hours()’ does not match any in class ‘am_pm_clock’
+==>    unsigned int am_pm_clock::get_hours()
+==>                 ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:58:15: error: candidate is: unsigned int am_pm_clock::get_hours() const
+==>   unsigned int get_hours() const;
+==>                ^
+==> am_pm_clock.cpp:88:16: error: prototype for ‘unsigned int am_pm_clock::get_minutes()’ does not match any in class ‘am_pm_clock’
+==>    unsigned int am_pm_clock::get_minutes()
+==>                 ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:69:15: error: candidate is: unsigned int am_pm_clock::get_minutes() const
+==>   unsigned int get_minutes() const;
+==>                ^
+==> am_pm_clock.cpp:101:16: error: prototype for ‘unsigned int am_pm_clock::get_seconds()’ does not match any in class ‘am_pm_clock’
+==>    unsigned int am_pm_clock::get_seconds()
+==>                 ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:80:15: error: candidate is: unsigned int am_pm_clock::get_seconds() const
+==>   unsigned int get_seconds() const;
+==>                ^
+==> am_pm_clock.cpp:114:8: error: prototype for ‘bool am_pm_clock::is_am()’ does not match any in class ‘am_pm_clock’
+==>    bool am_pm_clock::is_am()
+==>         ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:91:7: error: candidate is: bool am_pm_clock::is_am() const
+==>   bool is_am() const;
+==>        ^
+==> am_pm_clock.cpp:124:8: error: prototype for ‘void am_pm_clock::print(std::ostream&)’ does not match any in class ‘am_pm_clock’
+==>    void am_pm_clock::print(std::ostream& out)
+==>         ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:101:7: error: candidate is: void am_pm_clock::print(std::ostream&) const
+==>   void print(std::ostream& out) const {
+==>        ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

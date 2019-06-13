@@ -1,0 +1,18 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:11:11: error: extra ‘;’ [-Wpedantic]
+==>  am{true}{};
+==>            ^
+==> am_pm_clock.cpp:18:14: error: extra ‘;’ [-Wpedantic]
+==>   am(am_val){};
+==>               ^
+==> am_pm_clock.cpp:25:16: error: extra ‘;’ [-Wpedantic]
+==>   am(clock.am){};
+==>                 ^
+==> am_pm_clock.cpp:145:30: error: extra ‘;’ [-Wpedantic]
+==>  am_pm_clock::~am_pm_clock(){};
+==>                               ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

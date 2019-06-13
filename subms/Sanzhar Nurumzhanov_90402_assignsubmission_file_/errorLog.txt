@@ -1,0 +1,45 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:36:3: error: extra ‘;’ [-Wpedantic]
+==>   };
+==>    ^
+==> am_pm_clock.cpp:43:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:60:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:67:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:71:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:79:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:83:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:91:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:95:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:103:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:107:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:111:2: error: extra ‘;’ [-Wpedantic]
+==>  };
+==>   ^
+==> am_pm_clock.cpp:113:31: error: extra ‘;’ [-Wpedantic]
+==>  am_pm_clock::~am_pm_clock() {};
+==>                                ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

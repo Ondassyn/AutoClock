@@ -1,0 +1,16 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:32:1: error: ‘am_pm_clock::am_pm_clock’ names the constructor, not the type
+==>  am_pm_clock::am_pm_clock& operator=(const am_pm_clock& clock) {
+==>  ^
+==> am_pm_clock.cpp: In member function ‘void am_pm_clock::toggle_am_pm()’:
+==> am_pm_clock.cpp:46:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
+==>          return false;
+==>                 ^
+==> am_pm_clock.cpp:50:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
+==>          return true;
+==>                 ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

@@ -1,0 +1,16 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:12:7: error: extra ‘;’ [-Wpedantic]
+==>      {};
+==>        ^
+==> am_pm_clock.cpp:19:6: error: extra ‘;’ [-Wpedantic]
+==>     {};
+==>       ^
+==> am_pm_clock.cpp: In member function ‘am_pm_clock& am_pm_clock::operator=(const am_pm_clock&)’:
+==> am_pm_clock.cpp:34:4: warning: no return statement in function returning non-void [-Wreturn-type]
+==>     }
+==>     ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

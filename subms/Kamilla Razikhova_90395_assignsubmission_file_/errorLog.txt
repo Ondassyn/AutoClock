@@ -1,0 +1,38 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:23:7: error: expected initializer before ‘am’
+==>        am(am_val),
+==>        ^
+==> am_pm_clock.cpp:32:1: error: expected initializer before ‘am_pm_clock’
+==>  am_pm_clock::am_pm_clock& operator=(const am_pm_clock& clock){
+==>  ^
+==> am_pm_clock.cpp: In member function ‘void am_pm_clock::set_am(bool)’:
+==> am_pm_clock.cpp:162:11: error: expression cannot be used as a function
+==>     am(true);
+==>            ^
+==> am_pm_clock.cpp:164:12: error: expression cannot be used as a function
+==>     am(false);
+==>             ^
+==> am_pm_clock.cpp: At global scope:
+==> am_pm_clock.cpp:170:7: error: redefinition of ‘void am_pm_clock::print(std::ostream&) const’
+==>   void am_pm_clock::print(std::ostream& out) const {
+==>        ^
+==> In file included from am_pm_clock.cpp:11:0:
+==> am_pm_clock.h:101:7: note: ‘void am_pm_clock::print(std::ostream&) const’ previously defined here
+==>   void print(std::ostream& out) const {
+==>        ^
+==> am_pm_clock.cpp:180:16: error: declaration of ‘~am_pm_clock’ as non-member
+==>    ~am_pm_clock(){
+==>                 ^
+==> am_pm_clock.cpp: In function ‘std::ostream& operator<<(std::ostream&, const am_pm_clock&)’:
+==> am_pm_clock.cpp:184:22: error: redefinition of ‘std::ostream& operator<<(std::ostream&, const am_pm_clock&)’
+==>  inline std::ostream& operator << (std::ostream& out, const am_pm_clock& clock)
+==>                       ^
+==> In file included from am_pm_clock.cpp:11:0:
+==> am_pm_clock.h:114:22: note: ‘std::ostream& operator<<(std::ostream&, const am_pm_clock&)’ previously defined here
+==>  inline std::ostream& operator << (std::ostream& out, const am_pm_clock& clock) {
+==>                       ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

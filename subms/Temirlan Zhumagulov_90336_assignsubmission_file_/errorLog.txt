@@ -1,0 +1,21 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> main.o: In function `main':
+==> main.cpp:(.text.startup+0x3f): undefined reference to `am_pm_clock::am_pm_clock()'
+==> main.cpp:(.text.startup+0x22b): undefined reference to `am_pm_clock::am_pm_clock(unsigned int, unsigned int, unsigned int, bool)'
+==> main.cpp:(.text.startup+0x416): undefined reference to `am_pm_clock::am_pm_clock(am_pm_clock const&)'
+==> main.cpp:(.text.startup+0xaab): undefined reference to `am_pm_clock::operator=(am_pm_clock const&)'
+==> main.cpp:(.text.startup+0xc91): undefined reference to `am_pm_clock::toggle_am_pm()'
+==> main.cpp:(.text.startup+0xd09): undefined reference to `am_pm_clock::toggle_am_pm()'
+==> main.cpp:(.text.startup+0x115d): undefined reference to `am_pm_clock::am_pm_clock(unsigned int, unsigned int, unsigned int, bool)'
+==> main.cpp:(.text.startup+0x190d): undefined reference to `am_pm_clock::~am_pm_clock()'
+==> main.cpp:(.text.startup+0x1917): undefined reference to `am_pm_clock::~am_pm_clock()'
+==> main.cpp:(.text.startup+0x1921): undefined reference to `am_pm_clock::~am_pm_clock()'
+==> main.cpp:(.text.startup+0x192b): undefined reference to `am_pm_clock::~am_pm_clock()'
+==> main.cpp:(.text.startup+0x1989): undefined reference to `am_pm_clock::~am_pm_clock()'
+==> main.o:main.cpp:(.text.startup+0x1993): more undefined references to `am_pm_clock::~am_pm_clock()' follow
+==> collect2: error: ld returned 1 exit status
+==> make: *** [main] Error 1
+{Compiler}: FAILURE

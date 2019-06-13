@@ -1,0 +1,13 @@
+
+{Copying}: ...
+
+{Compiler}: ...
+==> am_pm_clock.cpp:93:6: error: redefinition of ‘void am_pm_clock::print(std::ostream&) const’
+==>  void am_pm_clock::print(std::ostream& out) const
+==>       ^
+==> In file included from am_pm_clock.cpp:1:0:
+==> am_pm_clock.h:101:7: note: ‘void am_pm_clock::print(std::ostream&) const’ previously defined here
+==>   void print(std::ostream& out) const {
+==>        ^
+==> make: *** [am_pm_clock.o] Error 1
+{Compiler}: FAILURE

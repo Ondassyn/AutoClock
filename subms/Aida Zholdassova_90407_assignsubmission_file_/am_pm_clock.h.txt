@@ -1,0 +1,166 @@
+#include <ostream>
+
+class am_pm_clock {
+
+	unsigned int hours, minutes, seconds;
+	bool		 am;
+
+public:
+    am_pm_clock::am_pm_clock()
+    : hours(12), minutes(00), seconds(00), am(true) {}
+	/*
+	 * Default constructor - initial time should be midnight
+	 */
+	
+     am_pm_clock::am_pm_clock(unsigned int hrs, unsigned int mins,
+     unsigned int secs, bool am_val)
+     : hours(hrs), minutes(mins), seconds(secs), am(am_val)
+    {}
+	/*
+	 * Constructor - sets fields to the given argument values
+	 */
+	am_pm_clock(unsigned int hrs, unsigned int mins,
+			    unsigned int secs, bool am_val);
+    am_pm_clock::am_pm_clock(const am_pm_clock &clock)
+    : hours(clock.hours),
+    minutes(clock.minutes), 
+    seconds(clock.seconds), 
+    am(clock.am) {}
+	/*
+	 * Copy constructor
+	 */
+	am_pm_clock(const am_pm_clock &clock);
+
+	/*
+	 * Assignment operator
+	 */
+	 am_pm_clock& am_pm_clock::operator=(const am_pm_clock& clock){
+        this->hours = clock.hours;
+        this->minutes = clock.minutes;
+        this->seconds = clock.seconds;
+        this->am = clock.am;
+        return *this;
+    }
+	am_pm_clock& operator=(const am_pm_clock& clock);
+
+	/*
+	 * Toggles the am/pm value for the clock
+	 */
+	void toggle_am_pm();
+    if (hours=>12) {
+            am = false; 
+     if (hours > 12){
+        double x = hours;
+        x/12;
+        if(x>1 && x<2){
+            hours = hours - 12;
+        }
+    }
+    }
+    
+    else am = true;
+    
+	/*
+	 * Resets the time to midnight
+	 */
+	void reset();
+    
+    hours=0;
+    minutes=0;
+    seconds=0;
+	/*
+	 * Advances the time of the clock by one second
+	 */
+	void advance_one_sec();
+    if(seconds<59) seconds++;
+    else{
+        seconds=0;
+        if(hours<11 && hours>0 && minutes<=59){
+            minutes++;
+            if(minutes==60) minutes = 0; hours++;
+        }
+        if(hours==11 && minutes<=59){
+            minutes++;
+            if(minutes==60) minutes = 0; hours++;
+            toggle_am_pm();
+    }
+    }
+	/*
+	 * Advances the time of the clock by n seconds
+	 */
+	void advance_n_secs(unsigned int n);
+    seconds = seconds + n;
+    int temp = seconds/60;
+    if (seconds>59){
+        minutes = minutes + temp;
+        seconds = seconds - 60*temp;
+        if(minutes>59){
+            temp = minutes/60;
+            hours = hours + temp;
+            minutes = minutes - 60*temp;
+            if(hours>11)    toggle_am_pm();
+        }
+    }
+	/*
+	 * Getter for hours field
+	 */
+	unsigned int get_hours() const;
+    return hours;
+	/*
+	 * Setter for hours field; throws an invalid_argument exception
+	 * if hrs is not a legal hours value
+	 */
+	void set_hours(unsigned int hrs);
+    hours = hrs;
+	/*
+	 * Getter for minutes field
+	 */
+	unsigned int get_minutes() const;
+    return minutes;
+	/*
+	 * Setter for minutes field; throws an invalid_argument exception
+	 * if mins is not a legal minutes value
+	 */
+	void set_minutes(unsigned int mins);
+    minutes = mins;
+	/*
+	 * Getter for seconds field
+	 */
+	unsigned int get_seconds() const;
+    return seconds;
+	/*
+	 * Setter for seconds field; throws an invalid_argument exception
+	 * if secs is not a legal seconds value
+	 */
+	void set_seconds(unsigned int secs);
+    seconds = secs;
+	/*
+	 * Getter for am field
+	 */
+	bool is_am() const;
+    return am;
+	/*
+	 * Setter for am field
+	 */
+	void set_am(bool am_val);
+    am_val;
+	/*
+	 * Print function - helper for output operator
+	 */
+	void print(std::ostream& out) const {
+		char buff[11];
+		std::sprintf(buff, "%02d:%02d:%02d%cm", hours, minutes, seconds,
+				( am ? 'a' : 'p' ));
+		out << buff;
+	}
+
+	/*
+	 * Destructor
+	 */
+	~am_pm_clock(){}
+};
+
+inline std::ostream& operator << (std::ostream& out, const am_pm_clock& clock) {
+	clock.print(out);
+	return out;
+}
